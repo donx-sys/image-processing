@@ -1,0 +1,28 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# tool output files
+matrix_*.csv
+crop_*.png
+*_segmented_*.png
+*_boundaries_*.png
+*_enhanced_*.png
+*_denoised_*.png
+*_noisy_*.png
+*_exploded_*.png
+*_split_*.png
+*_cropped_*.png
+*_displaced_*.png
+*_piece_*.png
+*_resized_*.png
+*_quantized_*.png
+*_information_*.png
+*_x_*.png
+matrix_*.csv
+
+# OS junk
+.DS_Store
+Thumbs.db
