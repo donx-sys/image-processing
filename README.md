@@ -1,7 +1,6 @@
 # Hands-On Learning — Digital Image Processing
 
-Interactive Python tools for learning Digital Image Processing — from
-pixels to segmentation, hands-on.
+Interactive Python tools for learning Digital Image Processing hands-on.
 
 Each topic opens in its own window with a manual page explaining the
 concept underneath.
