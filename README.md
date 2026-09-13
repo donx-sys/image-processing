@@ -8,22 +8,6 @@ concept underneath.
 
 ---
 
-## What's inside
-
-| # | Topic | Tool |
-|---|---|---|
-| 1.1 | Understanding Matrix Representation | `image_representation.py` |
-| 2.1.1 | Spatial Resolution: Resize | `image_resizer.py` |
-| 2.1.2 | Spatial Resolution: Cropping | `cropping_gui.py` |
-| 2.2.1 | Intensity Resolution: Quantization | `intensity_gui.py` |
-| 3.1 | Preprocessing: Noise Removal | `noise_gui.py` |
-| 3.2 | Preprocessing: Contrast Enhancement | `contrast_gui.py` |
-| 3.3 | Preprocessing: Information-Rich Areas | `information_gui.py` |
-| 4.1 | Segmentation Methods | `segmentation_gui.py` |
-| 4.2 | Boolean Operations on Images | `boolean_gui.py` |
-
----
-
 ## Windows
 
 ### 1. Install Python
@@ -34,22 +18,27 @@ Download Python 3.10 or newer from
 During the installer, **tick the box that says "Add python.exe to
 PATH"**. Skip this and nothing else will work.
 
-### 2. Open a terminal in the project folder
+### 2. Install Git
 
-Open PowerShell (or Command Prompt) and `cd` into the folder that
-contains `main.py`:
+Download Git for Windows from <https://git-scm.com/download/win> and
+run the installer with the default options.
+
+### 3. Clone the repository
+
+Open PowerShell (or Command Prompt) and run:
 
 ```powershell
-cd path\to\handsondip
+git clone https://github.com/donx-sys/image-processing.git
+cd image-processing
 ```
 
-### 3. Create a virtual environment
+### 4. Create a virtual environment
 
 ```powershell
 python -m venv venv
 ```
 
-### 4. Activate it
+### 5. Activate it
 
 **PowerShell:**
 
@@ -69,13 +58,13 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 venv\Scripts\activate.bat
 ```
 
-### 5. Install the dependencies
+### 6. Install the dependencies
 
 ```powershell
 pip install pillow numpy scipy tabulate
 ```
 
-### 6. Run
+### 7. Run
 
 ```powershell
 python src\main.py
@@ -102,10 +91,13 @@ brew install python-tk
 
 If Homebrew isn't installed, get it first from <https://brew.sh>.
 
-### 2. Open a terminal in the project folder
+### 2. Clone the repository
+
+Git is installed on macOS by default. From a terminal:
 
 ```bash
-cd ~/path/to/handsondip
+git clone https://github.com/donx-sys/image-processing.git
+cd image-processing
 ```
 
 ### 3. Create a virtual environment
@@ -138,7 +130,7 @@ python src/main.py
 
 ## Linux
 
-### 1. Install Python, Tkinter, and venv tooling
+### 1. Install Python, Tkinter, venv tooling, and Git
 
 Tkinter is a system package on Linux, not a pip one — install it before
 anything else.
@@ -147,25 +139,26 @@ anything else.
 
 ```bash
 sudo apt update
-sudo apt install python3 python3-venv python3-pip python3-tk
+sudo apt install python3 python3-venv python3-pip python3-tk git
 ```
 
 **Fedora / RHEL:**
 
 ```bash
-sudo dnf install python3 python3-pip python3-tkinter
+sudo dnf install python3 python3-pip python3-tkinter git
 ```
 
 **Arch:**
 
 ```bash
-sudo pacman -S python python-pip tk
+sudo pacman -S python python-pip tk git
 ```
 
-### 2. Open a terminal in the project folder
+### 2. Clone the repository
 
 ```bash
-cd ~/path/to/handsondip
+git clone https://github.com/donx-sys/image-processing.git
+cd image-processing
 ```
 
 ### 3. Create a virtual environment
@@ -217,6 +210,12 @@ skipped. Activate the venv and re-run the `pip install` line.
 
 **`ModuleNotFoundError: No module named 'tkinter'` on Linux**
 Install the system package for your distribution (see step 1 above).
+
+**`git: command not found`**
+Git isn't installed. On Windows, install it from
+<https://git-scm.com/download/win>. On macOS, run `xcode-select --install`.
+On Linux, install it with your distribution's package manager
+(see step 1 above).
 
 **Window appears blank, or the Docs button does nothing**
 Run `main.py` from a terminal, not by double-clicking. The lines it
